@@ -119,7 +119,7 @@ const sections = {
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
             <div class="relative overflow-hidden h-64">
               <img 
@@ -143,6 +143,29 @@ const sections = {
               </div>
             </div>
           </div>
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="relative overflow-hidden h-64">
+              <img 
+                src="gt3.png" 
+                alt="Website Development" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6">
+                  <h3 class="text-white text-xl font-semibold">Website Development</h3>
+                  <p class="text-indigo-200">Web Development</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">OAuth login system</h3>
+              <p class="text-gray-600 mb-3">Gist Tracker Development</p>
+              <div class="flex justify-between text-sm text-gray-500">
+                <a href="https://github.com/Tiedaman33/Gist_Tracker_App" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition-colors">View Project</a>
+                <a href="https://youtu.be/TOHC-8DbASE?si=HImC67PgCddMTCqD" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
+              </div>
+            </div>
+          </div>          
         </div>
       </div>
     </section>
@@ -270,7 +293,7 @@ const sections = {
                 <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300" placeholder="Tell me about your project..."></textarea>
               </div>
               
-              <button type="submit" class="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium shadow-lg hover:shadow-xl">
+              <button type="submit" href="mailto:orinabravin6@gmail.com" class="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium shadow-lg hover:shadow-xl">
                 Send Message
               </button>
             </form>
