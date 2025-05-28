@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bravin Orina | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .active {
+      @apply text-indigo-600 border-b-2 border-indigo-600;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round" class="w-8 h-8 text-indigo-600">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5"></path>
+          <path d="M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="font-bold text-xl">Bravin Orina</span>
+      </div>
+
+      <!-- Hamburger Button (Visible on small screens) -->
+      <button id="mobile-menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8">
+        <li><button data-tab="home" class="tab-link active py-2 font-medium text-gray-600 hover:text-indigo-600">Home</button></li>
+        <li><button data-tab="about" class="tab-link py-2 font-medium text-gray-600 hover:text-indigo-600">About</button></li>
+        <li><button data-tab="portfolio" class="tab-link py-2 font-medium text-gray-600 hover:text-indigo-600">Portfolio</button></li>
+        <li><button data-tab="services" class="tab-link py-2 font-medium text-gray-600 hover:text-indigo-600">Services</button></li>
+        <li><button data-tab="contact" class="tab-link py-2 font-medium text-gray-600 hover:text-indigo-600">Contact</button></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <ul id="mobile-menu" class="md:hidden px-4 pb-4 space-y-2 hidden">
+      <li><button data-tab="home" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">Home</button></li>
+      <li><button data-tab="about" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">About</button></li>
+      <li><button data-tab="portfolio" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">Portfolio</button></li>
+      <li><button data-tab="services" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">Services</button></li>
+      <li><button data-tab="contact" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">Contact</button></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content" class="min-h-screen"></main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              class="w-6 h-6 text-indigo-400"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="font-bold text-white text-lg">Bravin Orina</span>
+          </div>
+          <p class="mb-4">
+            Creating beautiful digital experiences through thoughtful design and innovative technology.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-white font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#Home" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-white font-bold mb-4">Projects</h3>
+          <ul class="space-y-2">
+            <li class="hover:text-white transition-colors">Web Development</li>
+            <li class="hover:text-white transition-colors">AI Development</li>
+            <li class="hover:text-white transition-colors">Graphic Design</li>
+            <li class="hover:text-white transition-colors">API Development</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-white font-bold mb-4">Connect</h3>
+          <ul class="space-y-2">
+            <li><a href="https://www.linkedin.com/in/bravin-orina-3400451a8/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a></li>
+            <li><a href="https://github.com/Tiedaman33" target="_blank" class="hover:text-white transition-colors">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
+        <p>&copy; 2024 Bravin Orina. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript -->
+
+  <script src="script.js"></script>
+</body>
+</html>

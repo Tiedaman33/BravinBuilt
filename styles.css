@@ -1,0 +1,50 @@
+/* styles.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.flex {
+  display: flex;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.items-center {
+  align-items: center;
+}
+.space-x-2 > * + * {
+  margin-left: 0.5rem;
+}
+.font-bold {
+  font-weight: bold;
+}
+.text-indigo-600 {
+  color: #6366f1;
+}
+.bg-white {
+  background-color: #fff;
+}
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.p-4 {
+  padding: 1rem;
+}
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.hidden {
+  display: none !important;
+}
+.block {
+  display: block;
+}
+/* Add more utility classes as needed */
