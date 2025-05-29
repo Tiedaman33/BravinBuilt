@@ -113,13 +113,13 @@ const sections = {
         <div class="flex justify-center mb-12">
           <div class="inline-flex bg-white rounded-full p-1 shadow-sm">
             <button class="px-6 py-2 rounded-full transition-all text-gray-600 hover:bg-gray-100">All Works</button>
-            <button class="px-6 py-2 rounded-full transition-all text-gray-600 hover:bg-gray-100">Web Design</button>
+            <button class="px-6 py-2 rounded-full transition-all text-gray-600 hover:bg-gray-100">Web Dev</button>
             <button class="px-6 py-2 rounded-full transition-all text-gray-600 hover:bg-gray-100">UI/UX</button>
             <button class="px-6 py-2 rounded-full transition-all text-gray-600 hover:bg-gray-100">Graphic Design</button>
           </div>
         </div>
 
-        <div class="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
             <div class="relative overflow-hidden h-64">
               <img 
