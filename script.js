@@ -14,8 +14,8 @@ const sections = {
             <a href="#portfolio" class="px-8 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition-colors font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform">
               View My Work
             </a>
-            <a href="#contact" class="px-8 py-3 bg-white text-indigo-600 border-2 border-indigo-600 rounded-full hover:bg-indigo-50 transition-colors font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform">
-              Contact Me
+            <a href="BravinCV.pdf" download class="px-8 py-3 bg-white text-indigo-600 border-2 border-indigo-600 rounded-full hover:bg-indigo-50 transition-colors font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-transform">
+              Download CV
             </a>
           </div>
         </div>
