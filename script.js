@@ -130,7 +130,7 @@ const sections = {
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6">
                   <h3 class="text-white text-xl font-semibold">Website Development</h3>
-                  <p class="text-indigo-200">Web Development</p>
+                  <p class="text-indigo-200">Token authentication</p>
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ const sections = {
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6">
                   <h3 class="text-white text-xl font-semibold">Website Development</h3>
-                  <p class="text-indigo-200">Web Development</p>
+                  <p class="text-indigo-200">Open Authorization</p>
                 </div>
               </div>
             </div>
@@ -176,7 +176,7 @@ const sections = {
               <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                 <div class="p-6">
                   <h3 class="text-white text-xl font-semibold">Website Development</h3>
-                  <p class="text-indigo-200">Web Development</p>
+                  <p class="text-indigo-200">AI development</p>
                 </div>
               </div>
             </div>
