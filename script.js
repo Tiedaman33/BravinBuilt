@@ -165,7 +165,30 @@ const sections = {
                 <a href="https://youtu.be/TOHC-8DbASE?si=HImC67PgCddMTCqD" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
               </div>
             </div>
-          </div>          
+          </div> 
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+            <div class="relative overflow-hidden h-64">
+              <img 
+                src="oneaday.png" 
+                alt="Website Development" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div class="p-6">
+                  <h3 class="text-white text-xl font-semibold">Website Development</h3>
+                  <p class="text-indigo-200">Web Development</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Website Development</h3>
+              <p class="text-gray-600 mb-3"> AI resume builder</p>
+              <div class="flex justify-between text-sm text-gray-500">
+                <a href="https://github.com/Tiedaman33/one_a_day" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition-colors">View Project</a>
+                <a href="https://smart-resume-builder-gsrs.onrender.com/" target="_blank" class="text-indigo-600 hover:text-indigo-800 transition-colors">Live Demo</a>
+              </div>
+            </div>
+          </div>        
         </div>
       </div>
     </section>
