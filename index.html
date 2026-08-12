@@ -2,127 +2,624 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bravin Orina | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .active {
-      @apply text-indigo-600 border-b-2 border-indigo-600;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bravin Orina | Full-Stack Software Engineer</title>
+  <meta name="description" content="Portfolio of Bravin Orina, a Full-Stack Software Engineer in Nairobi, Kenya building scalable SaaS, fintech and AI-powered products with Laravel, Vue.js and Python." />
+  <meta name="author" content="Bravin Orina" />
+  <meta property="og:title" content="Bravin Orina | Full-Stack Software Engineer" />
+  <meta property="og:description" content="Full-Stack Software Engineer building scalable SaaS, fintech and AI-powered products with Laravel, Vue.js and Python." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b1120" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236366f1'/><text x='50' y='68' font-size='52' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>B</text></svg>" />
 </head>
-<body class="bg-white text-gray-800">
+<body>
 
-  <!-- Navigation -->
-  <nav class="sticky top-0 z-50 bg-white shadow-md">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="flex items-center space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-             stroke-linejoin="round" class="w-8 h-8 text-indigo-600">
-          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-          <path d="M2 17l10 5 10-5"></path>
-          <path d="M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="font-bold text-xl">Bravin Orina</span>
-      </div>
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="brand">
+        <span class="brand-mark">B</span>
+        <span class="brand-name">Bravin&nbsp;Orina</span>
+      </a>
 
-      <!-- Hamburger Button (Visible on small screens) -->
-      <button id="mobile-menu-toggle" class="md:hidden text-gray-600 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-             viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-8">
-        <li><button data-tab="home" class="tab-link active py-2 font-medium text-gray-600 hover:text-indigo-600">Home</button></li>
-        <li><button data-tab="about" class="tab-link py-2 font-medium text-gray-600 hover:text-indigo-600">About</button></li>
-        <li><button data-tab="portfolio" class="tab-link py-2 font-medium text-gray-600 hover:text-indigo-600">Portfolio</button></li>
-        <li><button data-tab="services" class="tab-link py-2 font-medium text-gray-600 hover:text-indigo-600">Services</button></li>
-        <li><button data-tab="contact" class="tab-link py-2 font-medium text-gray-600 hover:text-indigo-600">Contact</button></li>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="BravinOrina.pdf" class="btn btn-sm btn-solid" download>Download Resume</a></li>
       </ul>
-    </div>
+    </nav>
+  </header>
 
-    <!-- Mobile Menu (Hidden by default) -->
-    <ul id="mobile-menu" class="md:hidden px-4 pb-4 space-y-2 hidden">
-      <li><button data-tab="home" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">Home</button></li>
-      <li><button data-tab="about" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">About</button></li>
-      <li><button data-tab="portfolio" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">Portfolio</button></li>
-      <li><button data-tab="services" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">Services</button></li>
-      <li><button data-tab="contact" class="tab-link block w-full text-left py-2 font-medium text-gray-600 hover:text-indigo-600">Contact</button></li>
-    </ul>
-  </nav>
+  <main>
+    <!-- ===== Home / Hero ===== -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="grid-overlay"></span>
+      </div>
 
-  <!-- Main Content -->
-  <main id="main-content" class="min-h-screen"></main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-12">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <div class="flex items-center space-x-2 mb-4">
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              stroke-width="2" 
-              stroke-linecap="round" 
-              stroke-linejoin="round" 
-              class="w-6 h-6 text-indigo-400"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-              <path d="M2 17l10 5 10-5"></path>
-              <path d="M2 12l10 5 10-5"></path>
-            </svg>
-            <span class="font-bold text-white text-lg">Bravin Orina</span>
-          </div>
-          <p class="mb-4">
-            Creating beautiful digital experiences through thoughtful design and innovative technology.
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="hero-availability"><span class="pulse-dot"></span> Open to new opportunities</p>
+          <h1 class="hero-title">Hi, I'm <span class="gradient-text">Bravin Orina</span></h1>
+          <p class="hero-role">Full-Stack Software Engineer</p>
+          <p class="hero-sub">
+            I design and ship <strong>scalable SaaS platforms</strong>, <strong>fintech tools</strong> and
+            <strong>AI-powered products</strong>, from clean architecture to production billing.
           </p>
-        </div>
-        
-        <div>
-          <h3 class="text-white font-bold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="#Home" class="hover:text-white transition-colors">Home</a></li>
-            <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
-            <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
-            <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
-            <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-solid">View My Work</a>
+            <a href="BravinOrina.pdf" class="btn btn-outline" download>Download Resume</a>
+          </div>
+
+          <ul class="hero-socials">
+            <li><a href="https://github.com/Tiedaman33" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/bravin-orina-3400451a8/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
+            <li><a href="mailto:orinabravin6@gmail.com" aria-label="Email">Email</a></li>
           </ul>
         </div>
-        
-        <div>
-          <h3 class="text-white font-bold mb-4">Projects</h3>
-          <ul class="space-y-2">
-            <li class="hover:text-white transition-colors">Web Development</li>
-            <li class="hover:text-white transition-colors">AI Development</li>
-            <li class="hover:text-white transition-colors">Graphic Design</li>
-            <li class="hover:text-white transition-colors">API Development</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 class="text-white font-bold mb-4">Connect</h3>
-          <ul class="space-y-2">
-            <li><a href="https://www.linkedin.com/in/bravin-orina-3400451a8/" target="_blank" class="hover:text-white transition-colors">LinkedIn</a></li>
-            <li><a href="https://github.com/Tiedaman33" target="_blank" class="hover:text-white transition-colors">GitHub</a></li>
-          </ul>
+
+        <div class="hero-visual reveal">
+          <div class="hero-portrait">
+            <img src="img.png" alt="Bravin Orina portrait" width="1024" height="1024" />
+          </div>
+          <span class="chip chip-1">Laravel</span>
+          <span class="chip chip-2">Vue 3</span>
+          <span class="chip chip-3">Python</span>
+          <span class="chip chip-4">M-Pesa API</span>
         </div>
       </div>
-      
-      <div class="border-t border-gray-800 mt-12 pt-8 text-sm text-center">
-        <p>&copy; 2024 Bravin Orina. All rights reserved.</p>
+
+      <div class="hero-stats container reveal">
+        <div class="stat"><strong>100+</strong><span>Businesses served</span></div>
+        <div class="stat"><strong>10</strong><span>Modular SaaS services</span></div>
+        <div class="stat"><strong>500+</strong><span>Invoices / month automated</span></div>
+        <div class="stat"><strong>3+</strong><span>Payment gateways integrated</span></div>
       </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow">About Me</span>
+          <h2 class="section-title">Engineer behind the products</h2>
+          <p class="section-sub">Full-Stack Software Engineer based in Nairobi, Kenya turning complex business problems into reliable, production-ready software.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <h3>Who I am</h3>
+            <p>
+              I'm a Full-Stack Software Engineer with experience designing and delivering scalable SaaS applications,
+              business automation platforms and fintech solutions. My stack is built around <strong>Laravel, Vue.js and Python</strong>,
+              with deep expertise in RESTful API development, payment gateway integration (M-Pesa, Stripe, PayPal),
+              database design and cloud deployment.
+            </p>
+            <p>
+              Beyond writing code, I care about shipping software that is <strong>tested, documented and secure</strong>.
+              I've taken platforms from monoliths to modular, scalable services, and driven them from development into
+              production, winning and onboarding real clients along the way. I also enjoy mentoring other engineers,
+              and I believe great engineering is about reliability, clean architecture and solving real problems.
+            </p>
+
+            <ul class="quick-facts">
+              <li><span>Location</span> Nairobi, Kenya</li>
+              <li><span>Email</span> orinabravin6@gmail.com</li>
+              <li><span>Phone</span> +254 705 885 972</li>
+              <li><span>Focus</span> SaaS, Fintech, AI</li>
+            </ul>
+
+            <a href="#portfolio" class="btn btn-solid">Explore My Projects</a>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="skills reveal">
+          <h3>Skills &amp; Tools</h3>
+          <div class="skill-group">
+            <h4>Languages</h4>
+            <div class="tags">
+              <span>Python</span><span>PHP</span><span>JavaScript</span><span>TypeScript</span><span>SQL</span><span>HTML/CSS</span><span>Bash</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Frameworks &amp; Libraries</h4>
+            <div class="tags">
+              <span>Laravel</span><span>Vue 3</span><span>React</span><span>Django</span><span>FastAPI</span><span>Vuetify</span><span>Tailwind CSS</span><span>Bootstrap</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Databases &amp; Caching</h4>
+            <div class="tags">
+              <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Cloud &amp; DevOps</h4>
+            <div class="tags">
+              <span>Docker</span><span>GitLab CI/CD</span><span>GitHub Actions</span><span>Firebase</span><span>Vercel</span><span>Nginx</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Payments &amp; APIs</h4>
+            <div class="tags">
+              <span>M-Pesa Daraja</span><span>Stripe</span><span>PayPal</span><span>Paystack</span><span>REST API Design</span><span>Swagger/OpenAPI</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Security &amp; Data Integrity</h4>
+            <div class="tags">
+              <span>Rate Limiting</span><span>reCAPTCHA</span><span>OTP Verification</span><span>IP Throttling</span><span>Database Cleanup</span><span>Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience timeline -->
+        <div class="experience reveal">
+          <h3>Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-head">
+                  <h4>Lead Software Developer</h4>
+                  <span class="timeline-date">Aug 2025 to Present</span>
+                </div>
+                <p class="timeline-org">Swifthub Limited · Nairobi, Kenya</p>
+                <ul>
+                  <li>Re-architected Tumabill into modular service plans with per-tenant provisioning and upsell paths.</li>
+                  <li>Led go-to-market: won and onboarded clients, issued the platform's first live invoice.</li>
+                  <li>Automated PDF invoicing (DomPDF) and integrated M-Pesa Daraja, Stripe and PayPal, cutting manual reconciliation effort by ~70%.</li>
+                  <li>Purged 526 bot signups and hardened auth with rate limiting, reCAPTCHA, OTP and IP throttling.</li>
+                  <li>Set up CI/CD (GitLab CI) and code review, increasing deploys from weekly to daily. Mentored 2 junior engineers.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-head">
+                  <h4>Machine Learning Engineer</h4>
+                  <span class="timeline-date">Feb 2025 to May 2025</span>
+                </div>
+                <p class="timeline-org">AicoMg.org</p>
+                <ul>
+                  <li>Led a production AI platform integrating domain-specific ML models into a modular, containerized architecture (Docker, FastAPI, Django).</li>
+                  <li>Designed secure authentication and an interactive CLI for real-time REST API interaction; managed deployment with Docker Compose and Nginx.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-head">
+                  <h4>ASR Product Engineer</h4>
+                  <span class="timeline-date">2025</span>
+                </div>
+                <p class="timeline-org">Senses Hub</p>
+                <ul>
+                  <li>Built core backend and modeling components for a multilingual speech recognition solution for the Inclusive Speech Technology Hackathon.</li>
+                  <li>Fine-tuned Whisper and wav2vec 2.0 on Kenyan English, Kiswahili and indigenous language datasets.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-card">
+                <div class="timeline-head">
+                  <h4>Product Design Manager</h4>
+                  <span class="timeline-date">Oct 2023 to Feb 2024</span>
+                </div>
+                <p class="timeline-org">Informed Systems Ltd</p>
+                <ul>
+                  <li>Managed website design, content strategy and SEO; oversaw branding and technical support for digital products.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Certifications -->
+        <div class="edu-grid reveal">
+          <div class="edu-card">
+            <span class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9l-10-5L2 9l10 5 10-5z"/><path d="M6 11.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v5"/></svg>
+            </span>
+            <div>
+              <h4>BSc. Computer Science</h4>
+              <p>Egerton University, Kenya</p>
+            </div>
+          </div>
+          <div class="edu-card">
+            <span class="edu-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </span>
+            <div>
+              <h4>Software Engineer Certificate</h4>
+              <p>Holberton School · <a href="https://savanna.alxafrica.com/certificates/x7J6Xz5pNY" target="_blank" rel="noopener" class="verify-link">Verify</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio ===== -->
+    <section id="portfolio" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow">Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-sub">Production software I've architected, built and taken to market across SaaS, fintech, HR, property and AI.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fintech">SaaS &amp; Fintech</button>
+          <button class="filter-btn" data-filter="business">HR &amp; Property</button>
+          <button class="filter-btn" data-filter="ai">AI &amp; ML</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+
+          <!-- Tumabill -->
+          <article class="project-card featured reveal" data-category="fintech">
+            <div class="project-visual">
+              <img src="tumabill.png" alt="Tumabill Invoice Generator dashboard screenshot" width="1920" height="868" />
+              <span class="project-badge">Featured</span>
+            </div>
+            <div class="project-body">
+              <h3>Tumabill Invoice Generator</h3>
+              <p>Full-stack, multi-tenant SaaS invoicing platform with automated PDF generation, multi-currency support and real-time payment tracking used by 50+ registered businesses. Re-architected from a monolithic bundle into modular service plans and shipped the platform's first live client invoice.</p>
+              <div class="tags">
+                <span>Laravel</span><span>Vue 3</span><span>Vuetify</span><span>MySQL</span><span>Redis</span><span>DomPDF</span><span>M-Pesa API</span>
+              </div>
+              <div class="project-stats">
+                <div><strong>50+</strong><span>Tumabill clients</span></div>
+                <div><strong>50+</strong><span>M-Reside clients</span></div>
+                <div><strong>10</strong><span>service plans</span></div>
+              </div>
+              <div class="project-links">
+                <a href="https://tumabill.com/" target="_blank" rel="noopener" class="btn btn-sm btn-solid">Visit Site</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Samkeb -->
+          <article class="project-card reveal" data-category="fintech">
+            <div class="project-visual">
+              <img src="samkab.png" alt="Samkab forex bureau management dashboard screenshot" width="1920" height="875" />
+            </div>
+            <div class="project-body">
+              <h3>Samkab · Forex Bureau Management</h3>
+              <p>Full-stack forex bureau management system handling multi-currency exchange corridors (KES, UGX), buy/sell rate management, teller reconciliation and spread-profit calculation with rich analytics.</p>
+              <div class="tags">
+                <span>Laravel</span><span>Vue 3</span><span>Vuetify</span><span>MySQL</span><span>ApexCharts</span><span>jsPDF</span><span>Laravel Excel</span>
+              </div>
+              <div class="project-stats">
+                <div><strong>20+</strong><span>daily customers</span></div>
+                <div><strong>KES</strong><span>buy/sell rates</span></div>
+                <div><strong>UGX</strong><span>corridor support</span></div>
+              </div>
+              <div class="project-links">
+                <a href="https://samkab.co.ke/" target="_blank" rel="noopener" class="btn btn-sm btn-solid">Visit Site</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Swift HR -->
+          <article class="project-card reveal" data-category="business">
+            <div class="project-visual grad-swift">
+              <span class="project-mono">H</span>
+              <svg viewBox="0 0 24 24" class="project-icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2m8-16a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm11 16v-2a4 4 0 0 0-3-3.87m-4-12.06a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Swift HR SaaS Core</h3>
+              <p>Enterprise HR platform with multi-payment gateway support (Stripe, PayPal, M-Pesa, Paystack, Flutterwave, PayTM, Mollie), real-time chat, role-based permissions and an automated installer.</p>
+              <div class="tags">
+                <span>Laravel 8</span><span>MySQL</span><span>Pusher</span><span>Spatie Permissions</span><span>Multi-gateway Payments</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- M-Reside -->
+          <article class="project-card reveal" data-category="business">
+            <div class="project-visual">
+              <img src="mreside.png" alt="M-Reside property management dashboard screenshot" width="1920" height="879" />
+            </div>
+            <div class="project-body">
+              <h3>M-Reside · Property Management</h3>
+              <p>Property management platform with tenant and lease management, invoicing, payment tracking, water bills and SMS communication for landlords and property managers, powered by M-Pesa STK Push.</p>
+              <div class="tags">
+                <span>Vue 3</span><span>Vuex</span><span>Chart.js</span><span>jsPDF</span><span>Firebase</span><span>M-Pesa STK Push</span>
+              </div>
+              <div class="project-stats">
+                <div><strong>50+</strong><span>clients</span></div>
+                <div><strong>M-Pesa</strong><span>STK Push payments</span></div>
+                <div><strong>SMS</strong><span>owner comms</span></div>
+              </div>
+              <div class="project-links">
+                <a href="https://m-reside.com/" target="_blank" rel="noopener" class="btn btn-sm btn-solid">Visit Site</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Nyuki AI -->
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-visual grad-nyuki">
+              <span class="project-mono">N</span>
+              <svg viewBox="0 0 24 24" class="project-icon" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v3m0 0a6 6 0 0 1 6 6h-3m-3-6a6 6 0 0 0-6 6h3m0 6a6 6 0 0 0 6 6v-3m-6-3H3m12 0h6"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <h3>Nyuki AI Platform</h3>
+              <p>Production-ready AI platform integrating multiple domain-specific machine learning models (3D generation, engineering Q&A) into a modular, containerized architecture with secure REST APIs and an interactive CLI. Built at AicoMg.org.</p>
+              <div class="tags">
+                <span>Python</span><span>FastAPI</span><span>Django</span><span>Docker</span><span>Docker Compose</span><span>Nginx</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Story Weaver -->
+          <article class="project-card reveal" data-category="web">
+            <div class="project-visual">
+              <img src="stwvr.png" alt="Story Weaver platform screenshot" width="1320" height="685" />
+            </div>
+            <div class="project-body">
+              <h3>Story Weaver</h3>
+              <p>Web platform with token-authenticated storytelling and community content.</p>
+              <div class="tags">
+                <span>Web Development</span><span>Token Auth</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Tiedaman33/A_stories/tree/main" target="_blank" rel="noopener" class="btn btn-sm btn-solid">Code</a>
+                <a href="https://www.youtube.com/watch?v=2Yz-lVcovyg" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Gist Tracker -->
+          <article class="project-card reveal" data-category="web">
+            <div class="project-visual">
+              <img src="gt3.png" alt="Gist Tracker OAuth login screenshot" width="666" height="681" />
+            </div>
+            <div class="project-body">
+              <h3>Gist Tracker · OAuth Login</h3>
+              <p>Gist tracking app with a complete OAuth login system for secure third-party sign-in.</p>
+              <div class="tags">
+                <span>OAuth</span><span>Web Development</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Tiedaman33/Gist_Tracker_App" target="_blank" rel="noopener" class="btn btn-sm btn-solid">Code</a>
+                <a href="https://youtu.be/TOHC-8DbASE?si=HImC67PgCddMTCqD" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- One A Day -->
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-visual">
+              <img src="oneaday.png" alt="One A Day AI resume builder screenshot" width="1140" height="698" />
+            </div>
+            <div class="project-body">
+              <h3>One A Day · AI Resume Builder</h3>
+              <p>AI-assisted resume builder that generates polished, tailored resumes in minutes.</p>
+              <div class="tags">
+                <span>AI Development</span><span>Web App</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Tiedaman33/one_a_day" target="_blank" rel="noopener" class="btn btn-sm btn-solid">Code</a>
+                <a href="https://smart-resume-builder-gsrs.onrender.com/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow">Services</span>
+          <h2 class="section-title">What I Can Build For You</h2>
+          <p class="section-sub">End-to-end engineering from idea and architecture to secure, deployed software that handles real money and real users.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <span class="service-icon sv-1">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </span>
+            <h3>Web Development</h3>
+            <p>Responsive, high-performance websites and full-stack applications built to scale.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon sv-2">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+            <h3>API Development</h3>
+            <p>Robust, secure RESTful APIs with Swagger/OpenAPI documentation for scalable backends.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon sv-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </span>
+            <h3>Payment Integration</h3>
+            <p>M-Pesa Daraja, Stripe, PayPal, Paystack and more, with reconciliations and reporting.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon sv-4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </span>
+            <h3>AI &amp; Model Integration</h3>
+            <p>Deploying and integrating machine learning models into local and cloud systems.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon sv-5">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            </span>
+            <h3>Chatbot Development</h3>
+            <p>Custom AI-powered chatbots for education, onboarding and rural tech access.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon sv-6">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <h3>Authentication &amp; Security</h3>
+            <p>JWT, OAuth and session auth hardened with rate limiting, CAPTCHA and OTP verification.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon sv-7">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </span>
+            <h3>Database Design</h3>
+            <p>Optimized relational and NoSQL schemas for scalable storage, caching and querying.</p>
+          </div>
+          <div class="service-card reveal">
+            <span class="service-icon sv-8">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 16l-4-4-4 4"/><path d="M12 12v9"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+            </span>
+            <h3>Deployment &amp; DevOps</h3>
+            <p>Dockerized environments, CI/CD pipelines and deployment on GitLab, Render, Vercel or VPS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-eyebrow">Contact</span>
+          <h2 class="section-title">Let's Build Something Great</h2>
+          <p class="section-sub">Have a project in mind or an opportunity to discuss? I usually reply within 24 hours.</p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contact-form" action="mailto:orinabravin6@gmail.com" method="post" enctype="text/plain">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-solid btn-block">Send Message</button>
+          </form>
+
+          <div class="contact-info reveal">
+            <div class="contact-card">
+              <span class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div><h4>Location</h4><p>Nairobi, Kenya</p></div>
+            </div>
+            <div class="contact-card">
+              <span class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div><h4>Phone</h4><p><a href="tel:+254705885972">+254 705 885 972</a></p></div>
+            </div>
+            <div class="contact-card">
+              <span class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              <div><h4>Email</h4><p><a href="mailto:orinabravin6@gmail.com">orinabravin6@gmail.com</a></p></div>
+            </div>
+            <div class="contact-card">
+              <span class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </span>
+              <div><h4>Online</h4><p><a href="https://www.linkedin.com/in/bravin-orina-3400451a8/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Tiedaman33" target="_blank" rel="noopener">GitHub</a></p></div>
+            </div>
+            <a href="BravinOrina.pdf" class="btn btn-outline" download>Download Resume (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <span class="brand-mark">B</span>
+          <span class="brand-name">Bravin&nbsp;Orina</span>
+        </a>
+        <p>Full-Stack Software Engineer building scalable SaaS, fintech and AI products from Nairobi, Kenya.</p>
+        <ul class="footer-socials">
+          <li><a href="https://github.com/Tiedaman33" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/bravin-orina-3400451a8/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
+          <li><a href="mailto:orinabravin6@gmail.com" aria-label="Email">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="#portfolio">Tumabill</a></li>
+          <li><a href="#portfolio">Samkeb</a></li>
+          <li><a href="#portfolio">Swift HR</a></li>
+          <li><a href="#portfolio">M-Reside</a></li>
+          <li><a href="#portfolio">Nyuki AI</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:orinabravin6@gmail.com">orinabravin6@gmail.com</a></li>
+          <li><a href="tel:+254705885972">+254 705 885 972</a></li>
+          <li>Nairobi, Kenya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Bravin Orina. Built with passion in Nairobi.</p>
     </div>
   </footer>
-  <!-- JavaScript -->
 
   <script src="script.js"></script>
 </body>
